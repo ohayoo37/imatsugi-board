@@ -1,4 +1,4 @@
-/* いま・つぎ／つたえるボード（仮称）
+/* いま・つぎ／つたえるボード
    画面：ボードを選ぶ / いま・つぎ / つたえる / 支援者編集 / 印刷 / データの保存 / 使い方 / このアプリについて
    ユーザーが入力した文字は textContent でのみ表示し、HTMLとして扱わない。 */
 'use strict';
@@ -365,7 +365,7 @@ function viewList() {
   document.title = 'いま・つぎ／つたえるボード';
   var el = screen('list');
   el.appendChild(h('header', { class: 'app-head' },
-    h('h1', null, 'いま・つぎ／つたえるボード', h('span', { class: 'tag', text: '仮称' })),
+    h('h1', { text: 'いま・つぎ／つたえるボード' }),
     h('p', { class: 'lead', text: '予定の見通しと「きもち・お願い」を、絵や写真のカードで伝えるための無料ツールです。' })));
 
   var last = lsGet('lastBoard');
@@ -1372,7 +1372,7 @@ function viewAbout() {
   document.title = 'このアプリについて';
   var el = screen('doc');
   el.appendChild(adultHeader('このアプリについて', '#/', 'ボードを選ぶ'));
-  el.appendChild(h('section', { class: 'panel' }, h('h2', { text: 'いま・つぎ／つたえるボード（仮称）' }),
+  el.appendChild(h('section', { class: 'panel' }, h('h2', { text: 'いま・つぎ／つたえるボード' }),
     h('p', { text: '版：' + APP_VERSION + '　無料でご利用いただけます。' }),
     h('p', { text: '利用登録・広告・課金・アクセス解析はありません。入力した言葉や写真を外部に送信しません。' }),
     h('p', { text: 'このツールは診断・治療・発達の評価を行うものではなく、療育の効果を保証するものではありません。' })));
